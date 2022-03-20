@@ -1,0 +1,21 @@
+{
+    "manifest_version" : 3,
+    "name" : "Quasar Developer Tools",
+    "version" : "1.0",
+    "description" : "Famous Developer Tools in your Browser Extension",
+    "icons" : {
+        "128" : "icons/Quasar_Community_Logo.png",
+        "48" : "icons/Quasar_Community_Logo.png",
+        "16" : "icons/Quasar_Community_Logo.png"
+    },
+    "action" : {
+        "default_icon" : "icons/icon16.png",
+        "default_popup" : "html/popup.html"
+    },
+    "permissions" : [
+        "storage",
+        "notifications",
+        "contextMenus",
+        "activeTab"
+    ]
+}
