@@ -1,33 +1,40 @@
-<html>
-    <head>
-       <title>Quasar Developer Tools</title>
-       <link rel="stylesheet" href="/css/popup.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="logo">
-                <img src="/images/only logo.png" alt="logo" width="250px" height="250px">
-            </div>
-            <h1>Quasar Developer Tools</h1>
-            
-            
-            <div class="bookmark">
-                <h2 >Bookmark this page <img src="/icons/icons8-bookmark.svg" id="book"></h2>
-            </div>
-            <div class="buttons">
-                <button type="button" class="fill-btn">View Bookmarks <img src="/icons/icons8-bookmark.svg" id="mark"></button>
-            </div><br>
-            <div class="buttons">
-                <select name="emulator" id="emulator" class="fill-btn">
-                    <option>Choose Emulator </option>
-                    <option value="iphone">Iphone</option>
-                    <option value="samsung">Samsung</option>
-                    <option value="redmi">Redmi </option>
-                </select>
-            </div><br>
-            <div class="buttons">
-                <button type="button" class="fill-btn">Request Viewer <img src="/icons/earth-svgrepo-com.svg" id="globe"></button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quasar Developer Tools</title>
+    <link href="../css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo mx-auto">
+            <img src="/images/only logo.png" alt="Quasar Community Logo">
         </div>
-    </body>
+
+        <h1>Quasar Developer Tools</h1>
+
+        <div class="bookmark">
+            <a href="#">Bookmark this page <img src="/icons/icons8-bookmark.svg" id="book"></a>
+        </div>
+
+        <div class="buttons">
+            <button type="button" class="fill-btn">View Bookmarks <img src="/icons/icons8-bookmark.svg" id="mark"></button>
+
+            <select name="emulator" id="emulator" class="fill-btn">
+                <option>Choose Emulator </option>
+                <option value="iphone">Iphone</option>
+                <option value="samsung">Samsung</option>
+                <option value="redmi">Redmi </option>
+            </select>
+        
+            <button type="button" class="fill-btn">Request Viewer <img src="/icons/earth-svgrepo-com.svg" id="globe"></button>
+        </div>
+
+    </div>
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+</body>
 </html>
