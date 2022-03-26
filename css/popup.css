@@ -47,3 +47,19 @@ body{
     font-family:system-ui;
 }
 
+#phone{
+    height: 16px;
+    width: 16px;
+}
+
+#globe{
+    height: 16px;
+    width: 16px;
+}
+#emulator{
+    text-align: center;
+}
+#mark{
+    height: 14px;
+    width: 16px;
+}
