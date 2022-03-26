@@ -9,13 +9,22 @@
         "16" : "icons/Quasar_Community_Logo.png"
     },
     "action" : {
-        "default_icon" : "icons/icon16.png",
+        "default_icon" : "icons/Quasar_Community_Logo.png",
         "default_popup" : "html/popup.html"
     },
+    "options_page" : "html/popup.html",
+    "background" : {
+        "service_worker": "js/eventPage.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "css" : ["css/extension.css"],
+          "js": ["js/vendor/jquery-3.6.0.min.js", "js/content.js"]
+        }
+    ],
     "permissions" : [
         "storage",
-        "notifications",
-        "contextMenus",
         "activeTab"
     ]
 }

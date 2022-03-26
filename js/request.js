@@ -1,38 +1,38 @@
-const form = document.querySelector("[data-form]")
-const queryParamsContainer = document.querySelector("[data-query-params]")
-const requestHeadersContainer = document.querySelector("[data-request-headers]")
-const keyValueTemplate = document.querySelector("[data-key-value-template]")
-const responseHeadersContainer = document.querySelector("[data-response-headers]")
+const form = document.querySelector('[data-form]')
+const queryParamsContainer = document.querySelector('[data-query-params]')
+const requestHeadersContainer = document.querySelector('[data-request-headers]')
+const keyValueTemplate = document.querySelector('[data-key-value-template]')
+const responseHeadersContainer = document.querySelector('[data-response-headers]')
 
 
 const createKeyValuePair = () => {
   const element = keyValueTemplate.content.cloneNode(true)
-  element.querySelector("[data-remove-btn]").addEventListener("click", e => {
-    e.target.closest("[data-key-value-pair]").remove()
+  element.querySelector('[data-remove-btn]').addEventListener('click', e => {
+    e.target.closest('[data-key-value-pair]').remove()
   })
   return element
 }
 
 const keyValuePairsToObjects = (container) => {
-  const pairs = container.querySelectorAll("[data-key-value-pair]")
+  const pairs = container.querySelectorAll('[data-key-value-pair]')
   return [...pairs].reduce((data, pair) => {
-    const key = pair.querySelector("[data-key]").value
-    const value = pair.querySelector("[data-value]").value
+    const key = pair.querySelector('[data-key]').value
+    const value = pair.querySelector('[data-value]').value
 
-    if (key === "") return data
+    if (key === '') return data
     return { ...data, [key]: value }
   }, {})
 }
 
 document
-  .querySelector("[data-add-query-param-btn]")
-  .addEventListener("click", () => {
+  .querySelector('[data-add-query-param-btn]')
+  .addEventListener('click', () => {
     queryParamsContainer.append(createKeyValuePair())
   })
 
 document
-  .querySelector("[data-add-request-header-btn]")
-  .addEventListener("click", () => {
+  .querySelector('[data-add-request-header-btn]')
+  .addEventListener('click', () => {
     requestHeadersContainer.append(createKeyValuePair())
   })
 
@@ -49,7 +49,7 @@ const validate = (url) =>{
   '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
   '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
 
-  if(url == '') return false; // if url is empty
+  if(url === '') return false; // if url is empty
 
   else if(!pattern.test(url)) return false;
 
@@ -59,11 +59,11 @@ const validate = (url) =>{
 
 const sendDetails = () => {
   const url = $('#url').val();
-  const type = $("[data-method]").val();
+  const type = $('[data-method]').val();
   const header = keyValuePairsToObjects(requestHeadersContainer);
   const params = keyValuePairsToObjects(queryParamsContainer);
 
-  if(!validate(url)) return alert("enter a valid url");
+  if(!validate(url)) return alert('enter a valid url');
 
   $.ajax({
     type: type ,
@@ -81,7 +81,7 @@ const sendDetails = () => {
 })
 };
 
-$(document).on( 'click','#sendDetails', () => {
+$(document).on('click','#sendDetails', () => {
   $('#sendDetails').click(function(event){
     event.preventDefault();
   });
