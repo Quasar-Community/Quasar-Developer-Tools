@@ -51,6 +51,10 @@ body{
     font-size: 25px;
 }
 
+.heading{
+    font-style: bold;  
+}
+
 .logo img{
     width: 250px; 
     height: 250px;
@@ -62,6 +66,15 @@ body{
 
 select {
 	appearance: none;
+}
+
+select optgroup{
+    text-align: center;
+    /* right: auto;
+    left: 50%; 
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); */
 }
 
 #phone{
@@ -82,3 +95,4 @@ select {
     height: 14px;
     width: 16px;
 }
+

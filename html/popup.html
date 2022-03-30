@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link href="../css/vendor/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/popup.css">
 </head>
+
 <body>
     <div class="container">
 
@@ -22,16 +24,74 @@
         </div>
 
         <div class="buttons">
-            <button type="button" class="fill-btn">View Bookmarks <img src="/icons/icons8-bookmark.svg" id="mark"></button>
-
-            <select name="emulator" id="emulator" class="fill-btn"> 
+            <button type="button" class="fill-btn">View Bookmarks <img src="/icons/icons8-bookmark.svg"
+                    id="mark"></button>
+        </div>
+        <div class="buttons" id="dropdown">
+            <select name="emulator" id="emulator" class="fill-btn">
                 <option>Choose Emulator <img src="/icons/icons8-bookmark.svg" id="mark"></option>
-                <option value="iphone">Iphone</option>
-                <option value="samsung">Samsung</option>
-                <option value="redmi">Redmi </option>
+                <optgroup label="Apple" id="heading">
+                    <option value="iPhone 6S Plus">iPhone 6S Plus</option>
+                    <option value="iPhone 12 mini">iPhone 12 mini / 13 mini </option>
+                    <option value="iPhone 12">iPhone 12/12 Pro / 13/13 Pro</option>
+                    <option value="iPhone 12 Pro Max">iPhone 12 Pro Max/13 Pro Max</option>
+                    <option value="iPad Pro">iPad Pro</option>
+                    <option value="Apple iPad 10.2">Apple iPad (10.2)</option>
+                    <option value="Apple iPad Mini">Apple iPad Mini</option>
+                <optgroup label="Samsung">
+                    <option value="Samsung S22 ultra">Samsung S22 Ultra</option>
+                    <option value="Galaxy S9">Galaxy S9/S9+/S8/S8+</option>
+                    <option value="Galaxy Note 9">Galaxy Note 9/Note 8</option>
+                    <option value="Galaxy A30">Galaxy A30/ A50s </option>
+                    <option value="Galaxy S20 Ultra">Galaxy S20 Ultra/ S20 FE</option>
+                </optgroup>
+                <optgroup label="OnePlus" id="heading">
+                    <option value="OnePlus 6T">OnePlus 6T/ 7T Pro/ 7 Pro/7 /8 Pro</option>
+                    <option value="OnePlus 8T">OnePlus 8T/7T</option>
+                    <option value="OnePlus 8">OnePlus 8 / 8 / 9Pro</option>
+                </optgroup>
+                <optgroup label="Sony" id="heading">
+                    <option value="Xperia L4">Sony Xperia L4/10/10 Plus</option>
+                    <option value="Xperia Z5">Sony Xperia Z5/ Z3/ Z2 / Z3/ XZ/ X</option>
+                </optgroup>
+                <optgroup label="LG" id="heading">
+                    <option value="LG Nexus 5">LG Tribute Empire, Nexus 5</option>
+                    <option value="LG G6">LG Stylo 5/LG G6</option>
+                    <option value="LG W30">LG W30/ LG K50</option>
+                    <option value="LG G7 Fit">LG G8 ThinQ/ G7 Fit/ G7 One</option>
+                </optgroup>
+                <optgroup label="Huawei" id="heading">
+                    <option value="MatePad Pro">Huawei MatePad Pro</option>
+                    <option value="Huawei P9">Huawei P9/ P9 Lite/ P10 Plus</option>
+                    <option value="Huawei Mate 10 Lite">Huawei Mate 10 Lite</option>
+                    <option value="Huawei P20 lite">Huawei P20 lite</option>
+                    <option value="Nova 7i">Huawei P40 Lite, Nova 7i</option>
+                    <option value="Huawei P40">Huawei P40/P30 Pro/P30s</option>
+                </optgroup>
+                <optgroup label="Redmi" id="heading">
+                    <option value="Redmi Note 7">Redmi Note 7/ 8/ 8Pro/ Note 9</option>
+                    <option value="Redmi Mi 3">Mi 3</option>
+                    <option value="Redmi Note 9 Pro">Redmi Note 9 Pro</option>
+                    <option value="Poco X4 Pro">Xiaomi Poco X4 Pro</option>
+                </optgroup>
+                <!-- <optgroup label="Motorola" id="heading">
+                    <option value="">Moto Tab G70</option>
+                    <option value=""></option>
+                    <option value=""></option> -->
+                </optgroup>
+                <optgroup label="Pixel" id="heading">
+                    <option value="Pixel">Pixel / Pixel 2</option>
+                    <option value="Pixel 3">Pixel 3</option>
+                    <option value="Pixel 3 XL">Pixel 3 XL</option>
+                    <option value="Pixel 4">Pixel 5/4a</option>
+                    <option value="Pixel 4 XL">Pixel 4 XL</option>
+                </optgroup>
+
             </select>
-        
-            <button type="button" class="fill-btn">Request Viewer <img src="/icons/earth-svgrepo-com.svg" id="globe"></button>
+        </div>
+        <div class="buttons">
+            <button type="button" class="fill-btn">Request Viewer <img src="/icons/earth-svgrepo-com.svg"
+                    id="globe"></button>
         </div>
 
     </div>
@@ -39,4 +99,5 @@
     <script src="../js/vendor/jquery-3.6.0.min.js"></script>
     <script src="../js/popup.js"></script>
 </body>
+
 </html>
