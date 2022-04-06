@@ -1,13 +1,14 @@
 const openEmulator = (url, width, height) => {
-    const emulatorDetails = {
+    const windowDetails = {
         url : url,
         type : 'popup',
         top : 10,
-        left : 30,
+        left : 400,
         width : width,
-        height :height,
+        height : height,
+        focused : true,
     };
-    chrome.windows.create(emulatorDetails);
+    chrome.windows.create(windowDetails);
 };
 
 const getSize = (phoneName) => {
@@ -209,5 +210,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             });
         });
     sendResponse('Opening the Emulator');
+    }
+    else if(message.type === 'openRequest') {
+        openEmulator('../html/request.html', 800, 600);
+        sendResponse('Opening the Request Viewer');
     }
 });
