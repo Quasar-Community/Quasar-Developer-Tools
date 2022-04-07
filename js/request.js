@@ -86,4 +86,5 @@ $(document).on('click','#sendDetails', () => {
     event.preventDefault();
   });
   sendDetails();
+  $('#json-tab').tab('show');
 });
