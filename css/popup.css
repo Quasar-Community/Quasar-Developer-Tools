@@ -1,0 +1,85 @@
+body{
+    font-family:system-ui;
+    min-width: 350px;
+}
+
+.fill-btn {
+    background-color: #000;
+    border: 0;
+    color: #fff;
+    padding: 13px 5px;
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    width: 252px;
+    margin: 0 auto;
+    border-radius: 25px;
+    bottom: -25px;
+    left: 50%;
+    cursor: pointer;
+}
+
+.fill-btn:hover,
+.element-btn .element-fill-btn:hover {
+    background-color: #201f1f;
+    box-shadow: 0px 10px 50px -10px rgb(32, 31, 31);
+}
+
+.buttons {
+    display: grid;
+}
+
+.buttons .fill-btn {
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buttons .fill-btn:hover,
+.fill-btn:hover {
+    background-color: #ffe402;
+    color: #201f1f;
+    box-shadow: 0px 10px 50px -10px rgb(255, 228, 2);
+}
+
+.heading{
+    font-style: bold;  
+}
+
+.logo img{
+    width: 250px; 
+    height: 250px;
+}
+
+.container{
+    text-align: center;
+}
+
+select {
+	appearance: none;
+}
+
+select optgroup{
+    text-align: center;
+}
+
+#phone{
+    height: 16px;
+    width: 16px;
+}
+
+#globe{
+    height: 16px;
+    width: 16px;
+}
+
+#emulator{
+    text-align: center;
+}
+
+#mark{
+    height: 14px;
+    width: 16px;
+}
+

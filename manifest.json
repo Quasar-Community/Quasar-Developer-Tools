@@ -4,18 +4,25 @@
     "version" : "1.0",
     "description" : "Famous Developer Tools in your Browser Extension",
     "icons" : {
-        "128" : "icons/Quasar_Community_Logo.png",
-        "48" : "icons/Quasar_Community_Logo.png",
-        "16" : "icons/Quasar_Community_Logo.png"
+        "128" : "icons/logo128.png",
+        "48" : "icons/logo48.png",
+        "16" : "icons/logo16.png"
     },
     "action" : {
-        "default_icon" : "icons/icon16.png",
+        "default_icon" : "icons/logo128.png",
         "default_popup" : "html/popup.html"
     },
+    "options_page" : "html/popup.html",
+    "background" : {
+        "service_worker": "js/eventPage.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["js/vendor/jquery-3.6.0.min.js", "js/content.js"]
+        }
+    ],
     "permissions" : [
-        "storage",
-        "notifications",
-        "contextMenus",
         "activeTab"
     ]
 }

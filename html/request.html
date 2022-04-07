@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quasar Developer Chrome Extension Tool</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/request.css">
+
+</head>
+<body>
+  <div class="p-4">
+    <div class="logo">
+      <img src="/icons/Quasar_Community_Logo.png" alt="">
+    </div>
+    <form data-form>
+      <div class="input-group mb-4">
+        <select class="form-select flex-grow-0 w-auto" data-method>
+          <option value="GET" selected>GET</option>
+          <option value="POST">POST</option>
+          <option value="PUT">PUT</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+        <input data-url required class="form-control" type="url" placeholder="https://example.com" id="url" />        
+        <button type="button" class="btn btn-primary"  id="sendDetails"><img id="send-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEVklEQVRoge2ZT2wUVRzHP7/Znd1WaTdIg5WkQhRPpKam7S4hMcYaTOQCMcakYutB08SY9J+GmOChRzkAlisXRPwXNVESDyKUg2AqbYSSYoxGQ0k0QFPpUiLd7ew8D9tphu3M27fLlqrZz23mvfm933fm+34zvwxUqVLlP42sdgLFOPC9eiBiL7yAq1J9qfirhePR1UiqGId+VXHnRuZZS6QLld2lFLZCvRk0918lYHg026osut0b2d0Wsg61NOTExPko6JpVF7D/3N9NERV5CXhNidrsnXdyLtdnM2xYVwuKE2+k1lwNun5VBLw7rhI1uYWdInQp1DPInXtxZi7L2Z9meK71wfwJ4WhYrHsmYEgpKzGe6cCVbnGzzyPcrwLmTU6lOX1xms6nmrCjFsBN14kdD4u74gIOnMtssYQuxrKvgDSG1T0n53JqYpoLv8+yo62Rhvr44oj6dHCb3A6LvyICvNKnUD0oWgm61T5m5rJ8Nfon0+kMzZsSNG9KLI2JFQm1D1TwPXBn6WMXYJtcNzmV5sT56yw4Lg31Mbo7NnrWAbjc1x57RERCb8FdPwFN6dPitwyAHbXYuXWDP3lEOKJLHsoUEFb6TPFbxmN7y3qf7wFQIupYsVjGAoqVPlP8lvEo9D2AoM70ttX8ViyeVoBp6TOh0DIeDfUxtresXzbfVZZ283oECjAtfaYEWQaCfb/IPDH7c5PYgQIsxV6gs5xkCwmyjEeA7z2+HHhCZoMGClkmHWA+EnsduFJKooU4OZdvfrzG12NXA5MP8r2HEmVkHwgR8HabpF1lvQzkTAP5mZnLcnTkyjK/e4T5Po9cS9+Kf2u6VqAAgMGU/R3Ie6aBPCan0rx/amqZ3z00vvc4NvS0OKbrhUYBsNbaexVMmAQqZhkPje/zayo+MFlvab5usPcxySjYDczr5hWzjIfO9wAKJnpTMaMb5qEVADCYjF8C9U7YeDHLeOh9v4gy37weRQUAzLbHD4KM+M+ZWgaMfA+atlGHkYAhEdd1nG7gLzC3jEcx3wP5tjEZ3DbqMBIAMLjtvj8Qekwt41HM90to2kYdxgIA+tvjX5z/5WbHmpro8Ygl2o0Nhr7Po20bdZT9ldOw5+c6m2wn0AO0Fo7bUYvujoeLWwcAdbg/WdNTTh4V6cge2nNxnAIRO9oazawDiGU92ddmnyln7ZIsFJ4Bh/2Hxr7Pc7m3NXq23KUrIsCpjXwYieT3RAm+B8zaRh0VETA9tOVWXW30pGG992PUNuqojIWARF1s2Kje+zBtG3VUTMDowKMnmzcmXmTxZWeCaduoo2ICAPpT8c9y5FoQOW0w3bht1LEiPziUUnJoLNOrkH1AmKc+6U/G77ptregT8BAR1ZesGXbz74YLQXNKaRt1rIgAj8Fk/JK1NrYVYR/g+2QtrW3Ucc/+kR384XaHiHUEaALZ35+MvVWJuCv6BPwMpGpHlB17HMXHpbaNVapU+R/zD0M0zyEd/SfIAAAAAElFTkSuQmCC"/></button>
+     
+      </div>
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="query-params-tab" data-bs-toggle="tab" data-bs-target="#query-params" type="button" role="tab" aria-controls="query-params" aria-selected="true">Query Params</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="request-headers-tab" data-bs-toggle="tab" data-bs-target="#request-headers" type="button" role="tab" aria-controls="request-headers" aria-selected="false">Headers</button>
+        </li>
+        <li class="nav-item" role="presentation" id="json-result">
+          <button class="nav-link" id="json-tab" data-bs-toggle="tab" data-bs-target="#json" type="button" role="tab" aria-controls="json" aria-selected="false">Output</button>
+        </li>
+      </ul>
+
+      <div class="tab-content p-3 border-top-0 border">
+        <div class="tab-pane fade show active" id="query-params" role="tabpanel" aria-labelledby="query-params-tab">
+          <div data-query-params></div>
+          <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
+        </div>
+        <div class="tab-pane fade" id="request-headers" role="tabpanel" aria-labelledby="request-headers-tab">
+          <div data-request-headers></div>
+          <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
+        </div>
+        <div class="tab-pane fade" id="json" role="tabpanel" aria-labelledby="json-tab">
+          <textarea id="prettyJSONFormat" cols=100 rows="20"></textarea>
+        </div>
+      </div>
+    </form>
+
+    <div class="mt-5 d-none" data-response-section>
+      <h3>Response</h3>
+      <div class="d-flex my-2">
+        <div class="me-3">
+          Status: <span data-status></span>
+        </div>
+        <div class="me-3">
+          Time: <span data-time></span>ms
+        </div>
+        <div class="me-3">
+          Size: <span data-size></span>
+        </div>
+      </div>
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="body-tab" data-bs-toggle="tab" data-bs-target="#body" type="button" role="tab" aria-controls="body" aria-selected="true">Body</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="response-headers-tab" data-bs-toggle="tab" data-bs-target="#response-headers" type="button" role="tab" aria-controls="response-headers" aria-selected="false">Headers</button>
+        </li>
+      </ul>
+
+      <div class="tab-content p-3 border-top-0 border">
+        <div class="tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
+          <div data-json-response-body class="overflow-auto" style="max-height: 200px;"></div>
+        </div>
+        <div class="tab-pane fade" id="response-headers" role="tabpanel" aria-labelledby="response-headers-tab">
+          <div style="display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem;" data-response-headers></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <template data-key-value-template>
+    <div class="input-group my-2" data-key-value-pair>
+      <input type="text" data-key class="form-control" placeholder="Key" />
+      <input type="text" data-value class="form-control" placeholder="Value" />
+      <button type="button" data-remove-btn class="btn btn-outline-danger">Remove</button>
+    </div>
+  </template>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="../js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../js/request.js"></script>
+</body>
+</html>
