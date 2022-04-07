@@ -14,13 +14,11 @@
       align-items: center;
   }
   .logo img{
-      /* background-color: black; */
       height: 150px;
       margin-top: -2%;
   }
   @media (max-width:750px) {
     .logo img{
-        /* background-color: black; */
         height: 150px;
         margin-top: -5%;
     }
