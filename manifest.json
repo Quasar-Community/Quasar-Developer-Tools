@@ -12,7 +12,6 @@
         "default_icon" : "icons/logo128.png",
         "default_popup" : "html/popup.html"
     },
-    "options_page" : "html/popup.html",
     "background" : {
         "service_worker": "js/eventPage.js"
     },
