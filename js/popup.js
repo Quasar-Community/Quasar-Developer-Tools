@@ -1,4 +1,4 @@
-$('#emulator').change(() => {
+$('#emulator').change(function() {
     const $option = $(this).find('option:selected');
     const value = $option.val();
     const sendDetails = {
@@ -6,7 +6,7 @@ $('#emulator').change(() => {
         type : 'openEmulator',
     };
     chrome.runtime.sendMessage(sendDetails, (response) => {
-        console.log('Opening the Emulator');
+        console.log('Sending Your Code');
     });
 });
 
