@@ -22,5 +22,5 @@
 ## Contributing Guidelines
   This is open source tool and is currently at a beginning phase, anyone can contribute to this project by first forking the repository to your account, making the changes and then creating a pull request. Make sure you explain breifly about what you did in the comments in the PR, so that it will be helpful for the reviewer to approve the changes.
 ## Developed by Quasar Community
-![Quasar Community Logo](https://github.com/Quasar-Community/Quasar-Developer-Tools/blob/main/icons/Quasar_Community_Logo.png?raw=true)
+![Quasar Community Logo](https://github.com/Quasar-Community/Quasar-Developer-Tools/blob/main/icons/logo128.png?raw=true)
  
