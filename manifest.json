@@ -14,7 +14,7 @@
     },
     "options_page" : "html/popup.html",
     "background" : {
-        "service_worker": "js/eventPage.js"
+        "service_worker": "js/eventpage.js"
     },
     "content_scripts": [
         {
